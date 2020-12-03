@@ -76,6 +76,7 @@ class BetaGeoFitter(BaseFitter):
         initial_params=None, 
         verbose=False, 
         tol=1e-7, 
+        bounds=None,
         index=None, 
         **kwargs
     ):
@@ -108,6 +109,7 @@ class BetaGeoFitter(BaseFitter):
             set to true to print out convergence diagnostics.
         tol : float, optional
             tolerance for termination of the function minimization process.
+        bounds: sequence
         index: array_like, optional
             index for resulted DataFrame which is accessible via self.data
         kwargs:
@@ -140,6 +142,7 @@ class BetaGeoFitter(BaseFitter):
             4,
             verbose,
             tol,
+            bounds,
             **kwargs
         )
 
